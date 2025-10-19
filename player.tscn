@@ -414,16 +414,16 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
-radius = 5.0
+radius = 4.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_76oay")
-animation = &"front_idle"
+animation = &"side_idle"
+offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_onrkg")

@@ -65,25 +65,32 @@ texture = ExtResource("2_qfnet")
 texture = ExtResource("3_i7141")
 0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
+0:5/0/y_sort_origin = 18
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(9.9143715, 26.132683, -6.8197136, 25.731525, -11.748245, 22.46494, -11.862862, 15.759842, 8.882822, 15.645226, 11.97748, 20.8603)
 6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
+6:7/0/y_sort_origin = 8
 6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(9.112055, 13.467503, -0.17192459, 14.785599, -9.455904, 14.67098, -15.759842, 10.544767, -15.07214, 3.954288, 14.613672, 3.7823625, 15.12945, 8.367044)
 8:6/size_in_atlas = Vector2i(2, 3)
 8:6/0 = 0
+8:6/0/y_sort_origin = 15
 8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.057310104, 21.834545, -5.444309, 19.886057, -8.88282, 15.645226, 8.710894, 15.587917, 5.6162357, 20.229908)
 10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
+10:7/0/y_sort_origin = 2
 10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(9.513214, 8.710896, -6.4185524, 8.940128, -11.92017, 5.730852, -11.461702, -0.8596277, 9.513216, -0.63039374, 11.862865, 4.2981396)
 11:2/size_in_atlas = Vector2i(1, 2)
 11:2/0 = 0
 10:0/size_in_atlas = Vector2i(2, 1)
 10:0/0 = 0
 5:0/0 = 0
+5:0/0/y_sort_origin = 5
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.93433, 5.9027786, -6.93433, 2.177724, 6.934334, 2.4069586, 6.934334, 6.017395)
 0:0/0 = 0
+0:0/0/y_sort_origin = 4
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.057308197, 5.2150755, -6.7624035, 1.6619473, 6.7624054, 1.604639)
 0:1/0 = 0
+0:1/0/y_sort_origin = 3
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.057308197, 7.1062565, -6.303936, 4.756607, -8, 1.7765646, 6.991642, 1.9484901, 4.8139153, 6.1320114)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhx03"]
@@ -118,8 +125,10 @@ sources/3 = SubResource("TileSetAtlasSource_o8fc1")
 sources/16 = SubResource("TileSetAtlasSource_q5onr")
 
 [node name="world" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_xo05s")
 format = 2
 layer_0/name = "ground"
@@ -131,3 +140,4 @@ layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(458764, 16, 5, 983053, 393232, 7, 589833, 655376, 7, 327712, 655376, 7, 851973, 655376, 7, 393242, 655376, 7, 983057, 16, 5, 8, 16, 5, 524294, 16, 5, 393219, 16, 5, 262145, 16, 5, 262168, 16, 5, 262172, 16, 5, 65545, 16, 5, -65513, 393232, 7, 65548, 393232, 7, 720901, 655376, 7, 589828, 16, 1, 393221, 16, 1, 196620, 16, 1, 30, 16, 1, 1048607, 16, 1, 983055, 16, 1, 983046, 16, 1, 1048579, 16, 1, 786433, 16, 1, 917505, 16, 5, 589824, 16, 5, 720922, 16, 0, 1048605, 16, 0, 917510, 16, 0, 17, 16, 0, 31, 16, 0, 524309, 16, 0)
 
 [node name="Player" parent="." instance=ExtResource("6_qfnet")]
+position = Vector2(10, 40)
