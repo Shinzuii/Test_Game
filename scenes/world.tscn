@@ -1,3 +1,116 @@
-[gd_scene format=3 uid="uid://bbhooy7p2qooj"]
+[gd_scene load_steps=12 format=3 uid="uid://bbhooy7p2qooj"]
+
+[ext_resource type="Texture2D" uid="uid://ddc2dtcigflv6" path="res://assets/mystic_woods_free_2.2/sprites/tilesets/plains.png" id="1_71j4m"]
+[ext_resource type="Texture2D" uid="uid://boq8kkwi1rvws" path="res://assets/mystic_woods_free_2.2/sprites/tilesets/decor_8x8.png" id="2_qfnet"]
+[ext_resource type="Texture2D" uid="uid://byd13fthlby8p" path="res://assets/mystic_woods_free_2.2/sprites/objects/objects.png" id="3_i7141"]
+[ext_resource type="Texture2D" uid="uid://bvwg83d05siq3" path="res://assets/mystic_woods_free_2.2/sprites/tilesets/fences.png" id="4_4mrxx"]
+[ext_resource type="Texture2D" uid="uid://c8b7gjjamq0p5" path="res://assets/mystic_woods_free_2.2/sprites/tilesets/grass.png" id="5_7r4gi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7kh3"]
+texture = ExtResource("1_71j4m")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3hyu"]
+texture = ExtResource("2_qfnet")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5onr"]
+texture = ExtResource("3_i7141")
+0:5/size_in_atlas = Vector2i(3, 4)
+0:5/0 = 0
+6:7/size_in_atlas = Vector2i(2, 2)
+6:7/0 = 0
+8:6/size_in_atlas = Vector2i(2, 3)
+8:6/0 = 0
+10:7/size_in_atlas = Vector2i(2, 2)
+10:7/0 = 0
+11:2/size_in_atlas = Vector2i(1, 2)
+11:2/0 = 0
+10:0/size_in_atlas = Vector2i(2, 1)
+10:0/0 = 0
+5:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhx03"]
+texture = ExtResource("4_4mrxx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o8fc1"]
+texture = ExtResource("5_7r4gi")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xo05s"]
+sources/0 = SubResource("TileSetAtlasSource_w7kh3")
+sources/1 = SubResource("TileSetAtlasSource_e3hyu")
+sources/2 = SubResource("TileSetAtlasSource_jhx03")
+sources/3 = SubResource("TileSetAtlasSource_o8fc1")
+sources/16 = SubResource("TileSetAtlasSource_q5onr")
 
 [node name="world" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_xo05s")
+format = 2
+layer_0/tile_data = PackedInt32Array(131075, 16, 5, 393219, 16, 5, 393225, 16, 5, 196619, 16, 5, 131078, 16, 5, 131080, 16, 5, 11, 16, 5, 262156, 16, 5, 196618, 16, 5, 393223, 16, 5, 393224, 16, 5, 393220, 16, 5, 393221, 16, 5, 458758, 16, 5, 458759, 16, 5, 458760, 16, 5, 524296, 16, 5, 524297, 16, 5, 524301, 16, 5, 393232, 16, 5, 327697, 16, 5, 196621, 393232, 7, 65551, 393232, 7, 131087, 393232, 7, 196623, 393232, 7, 196622, 393232, 7, 262158, 393232, 7, 262159, 393232, 7, 327695, 393232, 7, 393231, 393232, 7, 589840, 655376, 7, 655379, 655376, 7, 524308, 655376, 7)
