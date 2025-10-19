@@ -1,3 +1,4 @@
+#Idk now what to put here lol
 extends CharacterBody2D
 
 const SPEED = 100
